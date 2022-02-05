@@ -27,12 +27,13 @@ namespace valentine {
      */
     //% block="send valentine $valImage with $arrowNum arrows $arrowImage"
     //% arrowNum.defl=3
-    export function send_valentine(valImage: image, arrowNum: number, arrowImage: image) {
+    export function send_valentine(valImage: Image, arrowNum: number, arrowImage: Image) {
         if (arrowNum > 100) {
             redheart = sprites.createProjectileFromSide(valImage, randint(-20, 20), randint(30, 60))
-            redheart.startEffect(effects.coolRadial)
+            redheart.setKind(SpriteKind.Valentine)
+            redheart.lifespan = 5000
             for (let index = 0; index < 30; index++) {
-                arrow = sprites.createProjectileFromSprite(arrowImage, redheart, randint(-100, 100), 150)
+                arrow = sprites.createProjectileFromSprite(arrowImage, redheart, randint(-100, 100), randint(50, 100))
                 arrow.setKind(SpriteKind.Arrow)
                 arrow.startEffect(effects.coolRadial)
             }
@@ -67,12 +68,14 @@ namespace valentine {
       */
     //% block="check for win or loss"
     export function check_win_or_lose() {
-        if (player_sprite.width >= win_size) {
-            sprites.destroyAllSpritesOfKind(SpriteKind.Arrow)
-            sprites.destroyAllSpritesOfKind(SpriteKind.Valentine)
-            game.over(true)
-        } else if (player_sprite.width <= lose_size) {
-            game.over(false)
+        for (let value of sprites.allOfKind(SpriteKind.Player)) {
+            if (value.width >= win_size) {
+                sprites.destroyAllSpritesOfKind(SpriteKind.Arrow)
+                sprites.destroyAllSpritesOfKind(SpriteKind.Valentine)
+                game.over(true)
+            } else if (value.width <= lose_size) {
+                game.over(false)
+            }
         }
     }
 
