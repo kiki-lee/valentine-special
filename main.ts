@@ -27,7 +27,7 @@ namespace valentine {
      */
     //% block="send valentine $valImage with $arrowNum arrows $arrowImage"
     //% arrowNum.defl=3
-    export function send_valentine(valImage: Image, arrowNum: number, arrowImage: Image) {
+    export function send_valentine(valImage: image, arrowNum: number, arrowImage: image) {
         if (arrowNum > 100) {
             redheart = sprites.createProjectileFromSide(valImage, randint(-20, 20), randint(30, 60))
             redheart.startEffect(effects.coolRadial)
