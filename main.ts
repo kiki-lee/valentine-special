@@ -72,8 +72,6 @@ namespace valentine {
     export function check_win_or_lose() {
         for (let value of sprites.allOfKind(SpriteKind.Player)) {
             if (value.width >= win_size) {
-                sprites.destroyAllSpritesOfKind(SpriteKind.Arrow)
-                sprites.destroyAllSpritesOfKind(SpriteKind.Valentine)
                 game.over(true)
             } else if (value.width <= lose_size) {
                 game.over(false)
