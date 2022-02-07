@@ -26,6 +26,8 @@ namespace valentine {
      * number of arrows
      */
     //% block="send valentine $valImage with $arrowNum arrows $arrowImage"
+    //% valImage.shadow=screen_image_picker
+    //% arrowImage.shadow=screen_image_picker
     //% arrowNum.defl=3
     export function send_valentine(valImage: Image, arrowNum: number, arrowImage: Image) {
         if (arrowNum > 100) {
