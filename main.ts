@@ -1,6 +1,6 @@
 
-let lose_size = 0
-let win_size = 0
+let lose_size = 6
+let win_size = 120
 
 let arrow: Sprite = null
 let redheart: Sprite = null
