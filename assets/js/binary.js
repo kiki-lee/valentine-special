@@ -1,4 +1,4 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.8.17/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.6","target":"arcade","targetVersion":"1.8.17","repo":"kiki-lee/valentine-special"}
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.8.17/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.7","target":"arcade","targetVersion":"1.8.17","repo":"kiki-lee/valentine-special"}
 // total=1179508 new=5.38% cached=89.12% other=5.50%
 (function (ectx) {
 'use strict';
@@ -395,7 +395,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P20241(s) {
+function _main___P21320(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -745,23 +745,23 @@ switch (step) {
     s.callLocIdx = 49; s.pc = 31; return s.tmp_0;
   case 31:
     r0 = s.retval;
-    globals.Valentine___20254 = (r0);
+    globals.Valentine___21129 = (r0);
     s.tmp_0 = SpriteKind_create__P2250_mk(s);
     s.callLocIdx = 50; s.pc = 32; return s.tmp_0;
   case 32:
     r0 = s.retval;
-    globals.Arrow___20257 = (r0);
+    globals.Arrow___21132 = (r0);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-_main___P20241.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
-_main___P20241.continuations = [  ]
+_main___P21320.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
+_main___P21320.continuations = [  ]
 
-function _main___P20241_mk(s) {
+function _main___P21320_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P20241, depth: s.depth + 1,
+        parent: s, fn: _main___P21320, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -40201,7 +40201,7 @@ const sprites_BaseSpriteSayRenderer__C2040_VT = mkVTable({
   },
 });
 
-const breakpoints = setupDebugger(1, ["Valentine___20254","Arrow___20257"])
+const breakpoints = setupDebugger(1, ["Valentine___21129","Arrow___21132"])
 
-return _main___P20241
+return _main___P21320
 })
