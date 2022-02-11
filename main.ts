@@ -1,8 +1,9 @@
-let redheart: Sprite = null
-let arrow: Sprite = null
-let player_sprite: Sprite = null
+
 let lose_size = 6
 let win_size = 120
+
+let arrow: Sprite = null
+let redheart: Sprite = null
 
 namespace SpriteKind {
     //% isKind
@@ -11,6 +12,11 @@ namespace SpriteKind {
     //% isKind
     export const Arrow = SpriteKind.create()
 }
+
+
+
+//% color="#ef0568" icon="\uf004"
+//% block="Valentine"
 namespace valentine {
 
 
@@ -39,8 +45,8 @@ namespace valentine {
             redheart.setPosition(randint(-64, 64) + scene.cameraProperty(CameraProperty.X), -34 + scene.cameraProperty(CameraProperty.Y))
             redheart.setKind(SpriteKind.Valentine)
             redheart.lifespan = 5000
-            for (let index2 = 0; index2 <= arrowNum - 1; index2++) {
-                arrow = sprites.createProjectileFromSprite(arrowImage, redheart, divWidth * index2 - 50, 75)
+            for (let index = 0; index <= arrowNum - 1; index++) {
+                arrow = sprites.createProjectileFromSprite(arrowImage, redheart, divWidth * index - 50, 75)
                 arrow.setKind(SpriteKind.Arrow)
             }
         }
@@ -74,3 +80,4 @@ namespace valentine {
     }
 
 }
+
