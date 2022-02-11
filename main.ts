@@ -2,6 +2,7 @@
 let lose_size = 6
 let win_size = 120
 
+let player_sprite: Sprite = null
 let arrow: Sprite = null
 let redheart: Sprite = null
 
