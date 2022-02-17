@@ -10,7 +10,7 @@
         "main.blocks",
         "main.ts",
         "README.md",
-        "check-win-loss.md:,
+        "check-win-loss.md",
         "send-valentine-with-arrows.md",
         "set-win-loss-width.md",
         "assets.json"
